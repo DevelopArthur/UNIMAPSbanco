@@ -1,0 +1,53 @@
+create table aluno(
+-- coluna tipo restricao
+id_aluno serial primary key,
+matricula serial unique not null, -- unique=unico, só pode exirtir um. not null, tem que existir
+curso varchar(50) not null,
+email varchar(50) unique not null
+);
+
+create table professor(
+id_aluno serial primary key,
+nome serial unique not null, 
+departamento varchar(50) not null,
+email varchar(50) unique not null
+);
+
+create table coordenador(
+id_coordenador serial primary key,
+nome serial unique not null, 
+email varchar(50) unique not null
+);
+
+CREATE TABLE usuario (
+id_usuario SERIAL PRIMARY KEY,
+email VARCHAR(100) UNIQUE NOT NULL,
+senha VARCHAR(100) NOT NULL, 
+tipo VARCHAR(50) NOT NULL 
+);
+
+CREATE TABLE notificacao (
+id_notificacao SERIAL PRIMARY KEY,
+data timestamp(100) NOT NULL,
+mensagem VARCHAR(500) NOT NULL, 
+tipo VARCHAR(50) NOT NULL 
+);
+
+CREATE TABLE notificacao (
+id_notificacao SERIAL PRIMARY KEY,
+data timestamp(100) NOT NULL,
+mensagem VARCHAR(500) NOT NULL, 
+tipo VARCHAR(50) NOT null
+);
+
+CREATE TABLE sala (
+id_sala SERIAL PRIMARY KEY,
+bloco timestamp(100) NOT NULL,
+codigo VARCHAR(500) unique NOT NULL
+);
+
+CREATE TABLE turma (
+ID_TURMA INT PRIMARY KEY,
+SEMESTRE VARCHAR(100) NOT NULL,
+TURNO VARCHAR(100) NOT NULL
+);
