@@ -1,3 +1,10 @@
+ALUNOS:
+Arthur Floriano
+Nephi Andrejanini
+Ben-Hur Veiga
+João Vitor de Oliveira
+
+
 create table aluno(
 -- coluna tipo restricao
 id_aluno serial primary key,
